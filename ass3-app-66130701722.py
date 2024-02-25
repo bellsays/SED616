@@ -19,4 +19,4 @@ xnew
 
 pred = model.predict(xnew)
 st.write("## Prediction resulte:")
-st.write('Species:',pred[0])
+st.write('Species:')
