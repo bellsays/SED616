@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 from sklearn.linear_model import Perceptron
 
-model = pickle.load(open('per_model-66130701722.sav','rb'))
+model123 = pickle.load(open('per_model-66130701722.sav','rb'))
 
 st.title("Iris species Prediction using Preceptron")
 
@@ -15,6 +15,6 @@ x4 = st.slider('select Input4',0.0,10.0,7.0)
 
 xnew = np.array([[x1,x2,x3,x4]])#.reshape(1,-1)
 
-pred = model.predict(xnew)
+pred = model123.predict(xnew)
 st.write("## Prediction resulte:")
 st.write('Species:', pred[0])
