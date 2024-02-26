@@ -18,8 +18,8 @@ class PerceptronMe(object):
             print('--- Epoch: ', ep+1)
             errors = 0
             for xi, target in zip(X, y):
-                update = self.eta * (target - self.predict(xi))
                 print('x = ',xi, 'y_test = ', target, 'y_predict = ', self.predict(xi))
+                update = self.eta * (target - self.predict(xi))
                 self.w_[1:] += update * xi
                 self.w_[0] += update
                 errors += int(update != 0.0)
