@@ -3,8 +3,8 @@ import streamlit as st
 import pickle
 import numpy as np
 from sklearn.linear_model import Perceptron
-
-model132 = pickle.load(open('per_model-66130701722.sav','rb'))
+model_aap_per = Perceptron(tol=1e-3, random_state=0)
+model_aap_per = pickle.load(open('per_model-66130701722.sav','rb'))
 
 st.title("Iris species Prediction using Preceptron")
 
@@ -16,6 +16,6 @@ x4 = st.slider('select Input4',0.0,10.0,7.0)
 xnew = np.array([[6,3,5,3]])#.reshape(1,-1)
 
 
-model132.predict(xnew)
+model_aap_per.predict(xnew)
 st.write("## Prediction resulte:")
 st.write('Species:')
